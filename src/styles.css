@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    font-family: 'Century Gothic';
+    margin: 0px;
+    /* Padding is the space between the inner element and the space around it. */ 
+    padding: 10vw; /* 10% of the viewport width, ensures proper scaling. */
+    background-color: #111;
+    color: #09f; /* Apply foreground colour */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+}
