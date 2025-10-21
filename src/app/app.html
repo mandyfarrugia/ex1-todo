@@ -1,9 +1,11 @@
-<h2 style.colour="{{this.colour}}">This is the list of items you have to do today.</h2>
+<h2 style.color="{{this.colour}}" [innerText]="this.description"></h2>
 @if(this.getTodoItems() != null && this.getTodoItems().length > 0) {
 <ul>
     @for(item of this.getTodoItems(); track item.id) {
         <li>
-            {{ item.description }}
+            {{ item.id }}. {{ item.description }}
+            <button (click)="this.edit(item.id)">Edit</button>
+            <button (click)="this.delete(item.id)">Delete</button>
             <input type="checkbox" [checked]="item.completed"/>
         </li>
     }
