@@ -8,6 +8,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
+  colour: string = 'purple';
+
   todoItems: any[] = [
     { id: 1, description: 'Item Description 1', completed: false },
     { id: 2, description: 'Item Description 2', completed: true },

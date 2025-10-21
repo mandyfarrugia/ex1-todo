@@ -1,13 +1,14 @@
+<h2 style.colour="{{this.colour}}">This is the list of items you have to do today.</h2>
+@if(this.getTodoItems() != null && this.getTodoItems().length > 0) {
 <ul>
-    @if(this.getTodoItems() != null && this.getTodoItems().length > 0) {
-        @for(item of this.getTodoItems(); track item.id) {
-            <li>
-                {{ item.description }}
-                <input type="checkbox" [checked]="item.completed"/>
-            </li>
-        }
-    } 
-    @else {
-        <p>No todo items available!</p>
+    @for(item of this.getTodoItems(); track item.id) {
+        <li>
+            {{ item.description }}
+            <input type="checkbox" [checked]="item.completed"/>
+        </li>
     }
 </ul>
+}
+@else {
+    <p>No todo items available!</p>
+}
