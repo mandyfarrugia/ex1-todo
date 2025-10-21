@@ -3,6 +3,9 @@ ul {
 }
 
 li {
+    display: flex; /* Enable Flexbox. */
+    justify-content: space-between; /* To render the text on the left, and the checkbox on the right. */
+    align-items: center; /* Vertically center both text and the checkbox. */
     padding: 1rem;
     background-color: #222;
     margin-top: 1rem;
@@ -10,7 +13,6 @@ li {
 }
 
 input[type="checkbox"] {
-    float: right;
     border: 1px solid #09f;
     background-color: #111;
 }

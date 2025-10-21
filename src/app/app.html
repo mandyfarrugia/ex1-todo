@@ -1,18 +1,13 @@
 <ul>
-    <li>
-        Item - Item Description
-        <input type="checkbox"/>
-    </li>
-    <li>
-        Item - Item Description
-        <input type="checkbox"/>
-    </li>
-    <li>
-        Item - Item Description
-        <input type="checkbox"/>
-    </li>
-    <li>
-        Item - Item Description
-        <input type="checkbox"/>
-    </li>
+    @if(this.getTodoItems() != null && this.getTodoItems().length > 0) {
+        @for(item of this.getTodoItems(); track item.id) {
+            <li>
+                {{ item.description }}
+                <input type="checkbox" [checked]="item.completed"/>
+            </li>
+        }
+    } 
+    @else {
+        <p>No todo items available!</p>
+    }
 </ul>
